@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "product-microserv")
+@FeignClient(name = "product-microserv", url = "${PRODUCT_MICROSERV_URL:}")
 public interface ProductoFeignClient {
 
     @GetMapping("/product/user_id/{user_id}")
