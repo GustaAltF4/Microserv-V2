@@ -1,0 +1,11 @@
+com\user\service\UserService.class
+com\user\controller\UserController.class
+com\user\clients\ProductoFeignClient.class
+com\user\repository\UserRepo.class
+com\user\config\DataLoader.class
+com\user\entity\User.class
+com\user\UsuarioApplication.class
+com\user\dto\ProductDto.class
+com\user\config\OpenApiConfig.class
+com\user\config\CorsConfig.class
+com\user\entity\UserDto.class
