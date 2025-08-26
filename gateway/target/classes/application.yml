@@ -20,12 +20,12 @@ spring:
     gateway:
       routes:
         - id: user-route
-          uri: lb://user-microserv      # Nombre exacto de tu microservicio en Eureka
+          uri: ${USER_MICROSERV_URL:lb://user-microserv}
           predicates:
-            - Path=/users/**             # Ruta que vas a usar en el navegador
+            - Path=/users/**
 
 
         - id: product-route
-          uri: lb://product-microserv              # Nombre exacto de tu microservicio de productos en Eureka
+          uri: ${PRODUCT_MICROSERV_URL:lb://product-microserv}
           predicates:
-            - Path=/product/**           # Ruta que vas a usar en el navegador
+            - Path=/product/**
