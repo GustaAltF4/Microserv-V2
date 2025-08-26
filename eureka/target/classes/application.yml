@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-microserv
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0  # opcional, acelera inicio
+
