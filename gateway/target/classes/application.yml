@@ -1,0 +1,31 @@
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://eureka-microserv:8761/eureka
+      #defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka}
+      #defaultZone: https://microserv-v2.onrender.com/eureka
+    registerWithEureka: true
+    fetchRegistry: true
+
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: user-route
+          uri: lb://user-microserv      # Nombre exacto de tu microservicio en Eureka
+          predicates:
+            - Path=/users/**             # Ruta que vas a usar en el navegador
+
+
+        - id: product-route
+          uri: lb://product-microserv              # Nombre exacto de tu microservicio de productos en Eureka
+          predicates:
+            - Path=/product/**           # Ruta que vas a usar en el navegador
