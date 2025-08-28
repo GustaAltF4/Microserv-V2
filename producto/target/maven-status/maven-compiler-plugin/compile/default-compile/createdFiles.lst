@@ -1,0 +1,8 @@
+com\producto\repository\ProductRepo.class
+com\producto\service\ProductService.class
+com\producto\config\OpenApiConfig.class
+com\producto\ProductoApplication.class
+com\producto\controller\ProductController.class
+com\producto\config\CorsConfig.class
+com\producto\config\DataLoader.class
+com\producto\entitty\Product.class

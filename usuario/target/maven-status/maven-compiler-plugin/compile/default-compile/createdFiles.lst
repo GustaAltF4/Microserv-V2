@@ -1,0 +1,5 @@
+com\user\service\UserService.class
+com\user\controller\UserController.class
+com\user\UsuarioApplication.class
+com\user\config\OpenApiConfig.class
+com\user\entity\UserDto.class
