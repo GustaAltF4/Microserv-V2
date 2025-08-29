@@ -13,20 +13,16 @@ import reactor.core.publisher.Mono;
 public class CorsPreflightConfig {
 
     @Bean
-    public WebFilter corsFilter() {
+    public WebFilter preflightCorsFilter() {
         return (exchange, chain) -> {
-            ServerHttpResponse response = exchange.getResponse();
-            HttpHeaders headers = response.getHeaders();
-
-            headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
-            headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "GET,POST,PUT,DELETE,OPTIONS");
-            headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "*");
-
             if (exchange.getRequest().getMethod() == HttpMethod.OPTIONS) {
-                response.setStatusCode(HttpStatus.OK);
-                return Mono.empty();
+                exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
+                exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "GET,POST,PUT,DELETE,OPTIONS");
+                exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "*");
+                exchange.getResponse().setStatusCode(HttpStatus.OK);
+                return Mono.empty(); // termina la preflight
             }
-            return chain.filter(exchange);
+            return chain.filter(exchange); // para el resto de métodos, sigue normalmente
         };
     }
 }
