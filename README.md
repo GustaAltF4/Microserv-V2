@@ -20,7 +20,7 @@ Está desplegada en un plan gratuito, por lo que:
 También cuenta con una interfaz en **React** para probar los endpoints de forma más visual:  
 🔗 [**Interfaz de Usuario**](https://microservices-demo.netlify.app/)
   
-[📂 Repositorio UI](https://github.com/GustaAltF4/React-Practicas/tree/main/8-%20UI%20microserv/microserv-iu)
+📂 [Repositorio UI](https://github.com/GustaAltF4/React-Practicas/tree/main/8-%20UI%20microserv/microserv-iu)
 
 
 ---
