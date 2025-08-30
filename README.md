@@ -9,13 +9,13 @@ Está desplegada en un plan gratuito, por lo que:
 
 **Deploy del proyecto en Render utilizando Docker:**
 
-🔗 [Eureka](https://microserv-v2.onrender.com)
--**Gateway**
-🔗 [Gateway](https://microserv-v2-gateway.onrender.com/users/details)
--**Product**
-🔗 [Product-Service](https://microserv-v2-product.onrender.com/product)
--**User**
-🔗 [Users-Service](https://microserv-v2-user.onrender.com/users)
+- 🔗 [Eureka](https://microserv-v2.onrender.com)
+
+- 🔗 [Gateway](https://microserv-v2-gateway.onrender.com/users/details)
+
+- 🔗 [Product-Service](https://microserv-v2-product.onrender.com/product)
+
+- 🔗 [Users-Service](https://microserv-v2-user.onrender.com/users)
 
 También cuenta con una interfaz en **React** para probar los endpoints de forma más visual:  
 🔗 [**Interfaz de Usuario**](https://microservices-demo.netlify.app/)
@@ -38,21 +38,21 @@ Ejemplos de algunos endpoints implementados:
 ```
 
 
-- **Post weapon**
+- **Post**
 
 ```http
   POST /users/add
   POST /product/add
 ```
 
-- **Update weapon**
+- **Update**
 
 ```http
   PUT /users/update/{id}
   PUT /product/update/{id}
 ```
 
-- **Delete weapon**
+- **Delete**
 
 ```http
   DELETE /users/del/id/{id}
